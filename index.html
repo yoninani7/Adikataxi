@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adika Taxi - Premium Transportation Services</title>
+    <title>Adika Taxi - Reputable Transportation Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -124,55 +124,41 @@
             background: var(--primary);
             color: var(--white);
         }
-        /* Header & Navigation */
-        header {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: fixed;
-            width: 90%;
-        left: 15%;  /* (100% - 70%) / 2 = 15% */
-        right: auto;
-        top: 10px;
-            z-index: 1000;
-            transition: var(--transition);
-        }
+   header {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 91%; /* Change this value to whatever width you want */
+    top: 10px; /* Adjusted for better spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: var(--transition);
+    border-radius: var(--radius);
+}
 
-        .header-scrolled {
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
+.header-scrolled {
+    width: 100%; /* Full width when scrolled */
+    top: 0;
+    border-radius: 0;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
             transition: var(--transition);
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
+ 
+        .logo img {
+            width: auto;
+            height: 60px;
         }
-
-        .logo-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-right: 10px;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        .logo-text span {
-            color: var(--primary);
-        }
-
+ 
+ 
         .nav-menu {
             display: flex;
             list-style: none;
@@ -278,16 +264,9 @@
             flex-wrap: wrap;
         }
 
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .hero-car {
-            max-width: 100%;
-            animation: float 5s ease-in-out infinite;
-        }
-
+        .hero-image { 
+               animation: float 5s ease-in-out infinite;
+        } 
         @keyframes float {
             0% {
                 transform: translateY(0px);
@@ -957,26 +936,22 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-     <center>
+    <!-- Header --> 
     <header id="header"  >
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <i class="fas fa-taxi logo-icon"></i>
-                    <span class="logo-text">Adika<span>Taxi</span></span>
+                <a href="#" class="logo" >
+                     <img src="assets/adika_primary.png" alt="adika logo">
                 </a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#fleet" class="nav-link">Our Fleet</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li> 
                     <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-cta">
-                    <a href="#" class="btn btn-outline">Login</a>
-                    <a href="#" class="btn">Sign Up</a>
+                    <a href="#" class="btn">Book a trip</a> 
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -985,24 +960,23 @@
                 </div>
             </nav>
         </div>
-    </header>
-</center>
+    </header> 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Premium Taxi Services You Can Trust</h1>
+                    <h1 class="hero-title">Reputable Taxi Services You Can Trust</h1>
                     <p class="hero-subtitle">Experience safe, comfortable, and reliable transportation with Adika Taxi. Available 24/7 for all your travel needs.</p>
                     <div class="hero-buttons">
                         <a href="#" class="btn">Book a Ride</a>
                         <a href="#" class="btn btn-outline">Download App</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <!-- Car illustration placeholder -->
-                    <div style="width:100%;height:300px;background:#ffffff20;border-radius:20px;display:flex;align-items:center;justify-content:center;color:white;font-size:24px;">
-                        <i class="fas fa-car" style="font-size: 200px;"></i>
+                <div class="hero-image"> 
+                    <div style=" background:#ffffff20;border-radius:20px; 
+                        width: 10px; color:white;font-size:24px;">
+                        <img src="assets/jo.jpg" >
                     </div>
                 </div>
             </div>
