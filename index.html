@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adika Taxi - Reputable Transportation Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
   <link rel="icon" type="image/png" href="assets/adika_logo_red.png" sizes="164x164">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
@@ -26,7 +25,7 @@
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-cta">
-                    <a href="#" class="btn">Book a trip</a> 
+                    <a href="#" class="btn">Become a driver</a> 
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -36,27 +35,29 @@
             </nav>
         </div>
     </header> 
-   <!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Reputable Taxi Service You Can Fully Trust</h1>
-                <p class="hero-subtitle">Experience safe, comfortable, and reliable transportation with Adika Taxi. Available 24/7 for all your travel needs.</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn">Book a Ride</a>
-                    <a href="#app" class="btn btn-outline"  >Download App</a>
-                </div>
-            </div>
-            <div class="hero-image"> 
-                <img src="assets/jo.jpg" alt="Adika Taxi Service" style="max-width: 500px; width: 100%;height: 290px;">
+<section class="hero-v4" id="home" >
+    <div class="hero-content-v4">
+        <div class="content-wrapper-v4">
+            <h1 class="hero-title-v4">Reliable Rides. <span class="accent-line">Always On Time.</span></h1>
+            <p class="hero-subtitle-v4">Experience the convenience of Adika Taxi—safe, comfortable, and available 24/7. Book your premium travel solution in minutes.</p>
+            <div class="hero-buttons-v4">
+                <a href="#" class="btn btn-dark-v4">Book a Ride Instantly</a>
+                <a href="#app" class="btn btn-secondary-outline-v4">Download App</a>
             </div>
         </div>
     </div>
+    <div class="hero-image-v4">
+        <img src="assets/jo.png" alt="Adika Taxi Driver and Car">
+        <div class="image-bg-block"> 
+            <center>  <div class="hero-text-img">Need a Ride? Call Us right now on  <br><span>7000</span> </div> </center>
+        </div><br>
+        
+        
+    </div>
+     
 </section>
-
     <!-- Features Section -->
-    <section class="features section">
+    <section class="features section"  >
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose Adika Taxi ?</h2>
@@ -85,7 +86,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section class="about section" id="about">
         <div class="container">
@@ -105,15 +105,13 @@
                     <a href="about.html" class="btn">Learn More</a>
                 </div>
                 <div class="about-image">
-                    <!-- Image placeholder -->
-                    <div style="width:100%;height:400px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;color:#64748b;">
-                        <i class="fas fa-taxi" style="font-size: 100px;"></i>
+                    <div style="width:100%;height:450px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;color:#64748b;">
+                        <img src="assets/aboutus.png" style=" height: 100%;" >
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Services Section -->
     <section class="services section" id="services">
         <div class="container">
@@ -193,11 +191,9 @@
                         <p>Eco-friendly carpooling options to reduce costs and environmental impact.</p> 
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
-
     <!-- Fleet Section -->
     <section class="fleet section" id="fleet">
         <div class="container">
@@ -271,7 +267,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials Section -->
     <section class="testimonials section" id="testimonials">
         <div class="container">
@@ -308,7 +303,6 @@
             </div>
         </div>
     </section>
-
     <!-- App Section -->
     <section class="app section" id="app">
         <div class="container">
@@ -342,7 +336,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section class="contact section" id="contact">
         <div class="container">
@@ -408,7 +401,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -457,23 +449,19 @@
             </div>
         </div>
     </footer>
-
     <script>
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
-
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
-
         // Close mobile menu when a link is clicked
         document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         }));
-
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
@@ -483,10 +471,8 @@
                 header.classList.remove('header-scrolled');
             }
         });
-
         // Update copyright year automatically
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
         // Testimonial slider functionality
         const dots = document.querySelectorAll('.slider-dot');
         dots.forEach((dot, index) => {
@@ -498,7 +484,6 @@
                 // In a real implementation, you would move the slider track here
             });
         });
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -512,7 +497,6 @@
                 }
             });
         });
-
         // Form handling
         document.querySelectorAll('form').forEach(form => {
             form.addEventListener('submit', function(e) {
