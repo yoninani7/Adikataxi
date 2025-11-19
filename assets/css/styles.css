@@ -62,7 +62,7 @@
 
  .section {
      padding: 50px 0;
-     margin-top:30px;
+     margin-top:40px;
  }
 
  .section-title {
@@ -94,7 +94,7 @@
  .btn {
      display: inline-block;
      padding: 12px 30px;
-     background: var(--dark-light);
+     background: #a11111;
      color: var(--white);
      border: none;
      border-radius: var(--radius);
@@ -107,7 +107,7 @@
  }
 
  .btn:hover {
-     background: var(--primary-dark);
+     background: var(--primary);
      transform: translateY(-3px);
      box-shadow: var(--shadow-lg);
  }
@@ -135,17 +135,17 @@
      backdrop-filter: blur(10px);
      box-shadow: var(--shadow);
      position: fixed;
-     width:100%; 
+     width:91%; 
      left: 50%;
      transform: translateX(-50%);
      z-index: 1000;
      transition: var(--transition); 
      border: 1px solid rgba(9, 99, 184, 0.2);
+     top: 10px;
  }
 
  .header-scrolled {
-     width: 91%;
-     top: 10px;
+     width: 100%;
      border-radius: var(--radius);
      background: rgba(255, 255, 255, 0.829);
      backdrop-filter: blur(15px);
@@ -427,8 +427,8 @@
  }
 
  .btn-secondary-outline-v4:hover {
-     color: var(--primary);
-     border-color: var(--primary);
+     color: white; 
+        background-color: var(--primary);
  }
 
   
@@ -456,12 +456,10 @@
  }
 
 .hero-text-img { 
-    font-size: 1.6rem; 
-    line-height: 1.2;
-    font-weight: 800;
-    
-     
-    letter-spacing: 1px;  
+    font-size: 1.5rem; 
+    line-height: 1.4;
+    font-weight: 800; 
+    letter-spacing: 4px;  
     text-transform: uppercase;    
     color: rgb(255, 255, 255);  
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);   
