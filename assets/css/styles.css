@@ -758,112 +758,160 @@ header {
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
-
-/* Testimonials */
-.testimonials {
-    background: var(--light);
-}
-
+/* --- Slider Structure for Swipable Layout (Kept functional) --- */
 .testimonials-container {
-    max-width: 800px;
+    overflow: hidden; 
+    position: relative;
+    max-width: 900px; /* Limit max width for better centering */
     margin: 0 auto;
 }
 
-.testimonial-slider {
-    position: relative;
-    overflow: hidden;
-}
-
 .testimonial-track {
-    display: flex;
-    transition: transform 0.5s ease;
+    display: flex; 
+    transition: transform 0.4s ease-in-out; 
 }
 
 .testimonial-slide {
-    min-width: 100%;
-    padding: 0 15px;
+    flex-shrink: 0; 
+    width: 100%; 
+    padding: 15px; 
+    box-sizing: border-box;
 }
 
+/* --- Testimonial Card Styling --- */
 .testimonial-card {
-    background: var(--white);
+    background: #ffffff;
+    border-radius: 12px;
     padding: 30px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    text-align: center;
+    /* Modern, subtle lift effect */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    height: 100%; /* Ensure cards are same height if possible */
+    display: flex;
+    flex-direction: column;
+}
+/* --- Elegant Quote Styling --- */
+.testimonial-quote {
+    position: relative;
+    padding: 55px 25px;
+    margin-bottom: 30px;
+    background: #fefafa; /* Very subtle warm white background */
+    border-left: 4px solid var(--primary); /* Elegant red accent line */
+    border-radius: 4px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    flex-grow: 1;
+}
+
+/* Refined decorative quote mark */
+.testimonial-quote::before {
+    content: "\201C"; 
+    font-family: Georgia, serif;
+    font-size: 5.5rem;
+    color: #dc2626; /* Elegant red color */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 0.25; /* Subtle but visible */
+    line-height: 1;
+    z-index: 1;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Optional: Add a subtle hover effect */
+.testimonial-quote:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Optional: Style for the quote author/source */
+.quote-author {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #dc2626; /* Matching red color */
+    text-align: right;
 }
 
 .testimonial-text {
-    font-style: italic;
-    margin-bottom: 20px;
-    position: relative;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #4b5563; /* Slightly softer black */
+    font-style: italic; /* Emphasize the text */
+    position: relative; /* Bring text above the pseudo-element */
+    z-index: 2;
+    margin: 0;
 }
 
-.testimonial-text:before,
-.testimonial-text:after {
-    content: '"';
-    font-size: 3rem;
-    color: var(--primary-light);
-    opacity: 0.3;
-    position: absolute;
-}
-
-.testimonial-text:before {
-    top: -20px;
-    left: -10px;
-}
-
-.testimonial-text:after {
-    bottom: -40px;
-    right: -10px;
-}
-
+/* --- Author Section Styling --- */
 .testimonial-author {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb; /* Subtle separator line */
 }
 
 .author-avatar {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 15px; 
 }
 
-.author-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Style for the inner avatar content (placeholders) */
+.author-avatar > div {
+    /* Existing inline styles for placeholders remain effective */
+    font-size: 28px !important;
 }
 
 .author-info h4 {
-    margin-bottom: 5px;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
 }
 
 .author-info p {
-    color: var(--gray);
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #6b7280;
 }
 
+
+/* --- Navigation Dots Styling (More visual) --- */
 .slider-nav {
     display: flex;
     justify-content: center;
-    gap: 10px;
     margin-top: 30px;
 }
 
 .slider-dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
+    background: #d1d5db; /* Light gray inactive dot */
     border-radius: 50%;
-    background: var(--gray-light);
+    margin: 0 6px;
+    margin-bottom: 10px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .slider-dot.active {
-    background: var(--primary);
+    background: var(--primary); /* Primary color active dot */
+    width: 12px;
+    height: 12px;
+    transform: scale(1.1); 
 }
 
 /* Fleet Section */
